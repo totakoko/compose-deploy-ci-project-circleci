@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  server:
+    image: alpine
+    restart: unless-stopped
+    command: ash -c 'while true ; do echo -e "HTTP/1.1 200 OK\n\n$${CONTENT:-It works!}" | nc -l -p 5000; done'
+    environment:
+      - CONTENT=
+    ports:
+      - 8500:5000

@@ -1,0 +1,21 @@
+version: 2
+
+jobs:
+  deploy:
+    docker:
+      - image: totakoko/compose-deploy:master
+    steps:
+      - checkout
+      - run:
+          command: compose-deploy deploy
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - deploy:
+          requires: []
+          filters:
+            branches:
+              only:
+                - master
