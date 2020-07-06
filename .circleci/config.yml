@@ -3,7 +3,7 @@ version: 2
 jobs:
   deploy:
     docker:
-      - image: totakoko/compose-deploy:master
+      - image: totakoko/compose-deploy-ci:master
     steps:
       - checkout
       - run:
@@ -15,7 +15,3 @@ workflows:
     jobs:
       - deploy:
           requires: []
-          filters:
-            branches:
-              only:
-                - master
