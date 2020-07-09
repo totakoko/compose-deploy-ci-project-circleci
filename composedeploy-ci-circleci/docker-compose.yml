@@ -6,6 +6,6 @@ services:
     restart: unless-stopped
     command: ash -c 'while true ; do echo -e "HTTP/1.1 200 OK\n\n$${CONTENT:-It works!}" | nc -l -p 5000; done'
     environment:
-      - CONTENT=1544fc65bdfea8c6ffa8a6444bef133b3eb99187
+      - CONTENT=822c3b31916b28d0a8a5824953698fa3a806b784-2020-07-09T21:43:57+0000
     ports:
       - 8500:5000
