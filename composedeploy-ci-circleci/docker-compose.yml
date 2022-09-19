@@ -8,6 +8,6 @@ services:
     env_file:
       - secret.env
     environment:
-      - CONTENT=64750f30425ef9790ac1426a64bf1effbd43c7b2-2022-09-19T13:52:19+00:00
+      - CONTENT=8be492867b3e13383c1ae86b0a1403e0feaa3861-2022-09-19T16:58:37+00:00
     ports:
       - 8500:5000
