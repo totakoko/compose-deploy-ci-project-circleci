@@ -5,6 +5,8 @@ services:
     image: alpine
     restart: unless-stopped
     command: ash -c 'while true ; do echo -e "HTTP/1.1 200 OK\n\n$${CONTENT:-It works!}" | nc -l -p 5000; done'
+    env_file:
+      - secret.env
     environment:
       - CONTENT=8be492867b3e13383c1ae86b0a1403e0feaa3861-2022-09-19T15:09:50+00:00
     ports:
