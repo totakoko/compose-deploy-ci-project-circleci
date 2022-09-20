@@ -3,7 +3,7 @@ version: 2
 jobs:
   deploy:
     docker:
-      - image: totakoko/compose-deploy-ci:c975b27293ff47d1aae0d7b087edc6b143ec3755
+      - image: totakoko/compose-deploy-ci:adec1d447466b96ee8fd65574310fdc78be8bdc1
     steps:
       - checkout
       - run:
